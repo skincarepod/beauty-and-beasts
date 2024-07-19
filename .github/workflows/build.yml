@@ -1,9 +1,9 @@
-name: Angular Build
+name: Angular-Build
 
 # {1}
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev-dani" ]
   pull_request:
     branches: [ "main" ]
 
