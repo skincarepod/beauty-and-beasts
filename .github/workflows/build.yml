@@ -3,7 +3,7 @@ name: Angular Build
 # {1}
 on:
   push:
-    branches: [ "dev-dani" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
