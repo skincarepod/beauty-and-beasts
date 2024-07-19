@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:  # Add an empty line here for better readability
-          node-version: 16.x
+          node-version: 18.x
       - run: npm ci
       - run: npm test
