@@ -13,7 +13,7 @@ const api = process.env.apiKey;
   providedIn: 'root'
 })
 export class BreedsService {
-  private url = 'https://api.api-ninjas.com/v1/dogs'
+  private url = 'https://api.api-ninjas.com/v1/dogs?grooming=1&shedding=1'
   private allBreeds: Object[] = [];
 
 
