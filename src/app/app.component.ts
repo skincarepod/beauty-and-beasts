@@ -1,8 +1,11 @@
 import { Component, OnInit} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavComponent } from "./components/nav/nav.component";
+import { HomeComponent } from './components/home/home.component';
+import { MatcherComponent } from './components/matcher/matcher.component';
+import { AboutComponent } from './components/about/about.component';
+import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
 import { BreedsService } from './services/breeds.services';
 
 
@@ -10,9 +13,13 @@ import { BreedsService } from './services/breeds.services';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
+    RouterOutlet, RouterLink,RouterLinkActive,
     MatToolbarModule,
-    NavComponent
+    HomeComponent,
+    AboutComponent,
+    MatcherComponent,
+    DogfinderComponent,
+
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
