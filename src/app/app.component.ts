@@ -28,7 +28,8 @@ export class AppComponent {
   constructor(private breedsService: BreedsService) {}
 
   ngOnInit() {
-    this.breedsService.getAllDogsBreeds();
+    this.breedsService.getAllDogBreeds();
+    this.breedsService.getAllDogsInfo();
    
   }
   title = 'beautie-and-beasts';

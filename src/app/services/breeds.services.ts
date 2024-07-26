@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject, tap, of, map } from 'rxjs';
-import { Breeds } from './Breeds';
+import { BreedsInfo, Breeds } from './Breeds';
 
 import * as dogs from '../utils/dogs.json';
 
@@ -11,7 +11,7 @@ export class BreedsService {
   private dogsjson = JSON.parse(JSON.stringify(dogs));
 
   getAllDogsInfo() {
-    let allBreeds: Breeds[] = [];
+    let allBreeds: BreedsInfo[] = [];
     for (let i = 0; i < this.dogsjson.default.length; i++) {
       allBreeds = [
         {
@@ -45,16 +45,11 @@ export class BreedsService {
     return allBreeds;
   }
 
-  getAllDogsBreeds() {
-    let allBreeds = [];
+  getAllDogBreeds() {
+    let allBreeds: Breeds[] = [];
     for (let i = 0; i < this.dogsjson.default.length; i++) {
-      allBreeds = [
-        {
-          name: this.dogsjson.default[i].name,
-        },
-      ];
+      allBreeds.push(this.dogsjson.default[i].name);
     };
-    console.log(allBreeds)
-    return allBreeds;
+    return allBreeds.sort();
   }
 }
