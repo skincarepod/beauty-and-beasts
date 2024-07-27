@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject, tap, of, map } from 'rxjs';
-import Breeds from '../Breeds';
-import * as dotenv from "dotenv";
+import { Breeds } from './Breeds';
+// import * as dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
-const api = process.env.apiKey;
+// const api = process.env.apiKey;
 
 
 @Injectable({

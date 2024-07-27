@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MatcherComponent } from './components/matcher/matcher.component';
 import { AboutComponent } from './components/about/about.component';
 import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
-import { BreedsService } from './services/breeds.services';
+import { BreedsService } from './services/breeds.service';
 
 
 @Component({

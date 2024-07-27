@@ -13,7 +13,7 @@ export class BreedsService {
   getAllDogsInfo() {
     let allBreeds: BreedsInfo[] = [];
     for (let i = 0; i < this.dogsjson.default.length; i++) {
-      allBreeds = [
+      allBreeds.push(
         {
           image_link: this.dogsjson.default[i].image_link,
           good_with_children: this.dogsjson.default[i].good_with_children,
@@ -39,8 +39,7 @@ export class BreedsService {
           protectiveness: this.dogsjson.default[i].protectiveness,
           energy: this.dogsjson.default[i].energy,
           name: this.dogsjson.default[i].name,
-        },
-      ];
+        })
     };
     return allBreeds;
   }
