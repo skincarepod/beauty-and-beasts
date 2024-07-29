@@ -1,16 +1,21 @@
 import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+// import {HttpClientModule} from '@angular/common/http';
 
 import { DogsApiService } from './dogs.service';
 
 describe('DogsService', () => {
-  let service: DogsApiService;
+  let dogsApiService: DogsApiService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DogsApiService);
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [DogsApiService]
+    });
+    dogsApiService = TestBed.inject(DogsApiService);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(dogsApiService).toBeTruthy();
   });
 });

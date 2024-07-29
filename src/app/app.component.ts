@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MatcherComponent } from './components/matcher/matcher.component';
 import { AboutComponent } from './components/about/about.component';
 import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
-import { BreedsService } from './services/breeds.service';
+import { BreedService } from './services/breeds.service';
 
 
 @Component({
@@ -25,13 +25,11 @@ import { BreedsService } from './services/breeds.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(private breedsService: BreedsService) {}
+  constructor(private breedService: BreedService) {}
 
   ngOnInit() {
-    this.breedsService.getAllDogBreeds();
-    this.breedsService.getAllDogsInfo();
+    this.breedService.getAllDogBreeds();
+    this.breedService.getAllDogsInfo();
    
   }
-  title = 'beautie-and-beasts';
-
 }
