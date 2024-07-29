@@ -1,4 +1,4 @@
-export interface Breeds{
+export interface BreedsInfo{
     
         image_link: string;
         good_with_children: number;
@@ -24,4 +24,8 @@ export interface Breeds{
         protectiveness:number;
         energy: number;
         name: string;
+}
+
+export interface Breeds{
+        name:string;
 }
