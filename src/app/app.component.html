@@ -1,21 +1,23 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  </style>
 
-<mat-toolbar>
-  <h1>Beauty n Beasts</h1>
-  <div>
-      <h2 routerLink="/" routerLinkActive="active">Home</h2>
-      <h2 routerLink="/about" routerLinkActive="active">About</h2>
-      <h2 routerLink="/matcher" routerLinkActive="active">Matcher</h2>
-      <h2 routerLink="/dogfinder" routerLinkActive="active">Dog Finder</h2>
+
+<mat-toolbar tag="mat-toolbar-top-level">
+  <div class="mat-toolbar">
+    <h1>Beauty & Beasts</h1>
+    <div class="mat-toolbar-destinations-wrapper">
+      <ul class="mat-toolbar-destinations">
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/matcher" routerLinkActive="active">Matcher</a></li>
+        <li><a routerLink="/dogfinder" routerLinkActive="active">Dog Finder</a></li>
+      </ul>
+    </div>
+    <div class="mat-toolbar-spacer-right"></div>
   </div>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
