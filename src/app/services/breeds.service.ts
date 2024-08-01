@@ -46,8 +46,18 @@ export class BreedService {
   getAllDogBreeds() {
     let allBreeds: Breed[] = [];
     for (let i = 0; i < this.dogsjson.default.length; i++) {
-      allBreeds.push(this.dogsjson.default[i].name);
+      allBreeds.push(
+        {
+          name: this.dogsjson.default[i].name,
+          index: i
+        }
+      );
     };
-    return allBreeds.sort();
+    return allBreeds.sort((a: Breed, b: Breed) => a.name.localeCompare(b.name));
+  }
+
+  getDog(index: number) {
+    const allDogs = this.getAllDogsInfo()
+    return allDogs[index];
   }
 }
