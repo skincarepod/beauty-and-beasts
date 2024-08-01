@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #A3D0DC;
+  background-color: #FAB9B2;
 }
 
-.mat-toolbar h1 {
+.mat-toolbar h1 a {
   font: 1em Elsie;
+  color: #000;
+  text-decoration: none;
 }
 
 .mat-toolbar-destinations-wrapper {
@@ -24,7 +26,6 @@
 
 .mat-toolbar-destinations li {
   margin: 0 10px; 
- 
   text-decoration: none;
 }
 
