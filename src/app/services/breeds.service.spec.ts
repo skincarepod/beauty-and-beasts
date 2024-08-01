@@ -20,10 +20,10 @@ describe('BreedsService', () => {
     const getAllBreeds = breedService.getAllDogBreeds();
 
     // access data at the start of the array
-    expect(getAllBreeds[3]).toEqual('Akita' as unknown as Breed);
+    expect(getAllBreeds[3]).toEqual({ name: 'Akita', index: 94 });
 
     // access the last element in the array 
-    expect(getAllBreeds[getAllBreeds.length - 1]).toEqual('Yorkshire Terrier' as unknown as Breed);
+    expect(getAllBreeds[getAllBreeds.length - 1]).toEqual({ name: 'Yorkshire Terrier', index: 33 });
   });
 
   it('returns all dogs and their info', () => {
