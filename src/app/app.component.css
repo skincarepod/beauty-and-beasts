@@ -5,16 +5,15 @@
   background-color: #FAB9B2;
 }
 
-.mat-toolbar h1 a {
-  font: 1em Elsie;
-  color: #000;
-  text-decoration: none;
+.mat-toolbar img {
+  max-width: 60px;
+  display: flex;
 }
 
 .mat-toolbar-destinations-wrapper {
   display: flex;
   justify-content: center; 
-  flex-grow: 4; 
+  flex-grow: 10; 
 }
 
 .mat-toolbar-destinations {

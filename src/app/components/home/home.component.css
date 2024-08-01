@@ -1,15 +1,13 @@
 .home {
    padding: 10%
 }
+.home-container h1 {
+   font: 3em Elsie
+}
 
 .home-container h2 {
-   font: 3em Elsie;
+   font: 2em Elsie;
 } 
-
-.home-name {
-   max-width: 55%;
-   padding-bottom: 2%;
-}
 
 .home-container p {
    font: 1.25em 'Bodoni Moda';
@@ -32,6 +30,9 @@
  }
 
  .home-container button:hover {
-   background-color: #C7857E; 
-   color: #000000;
+   background-color: #0C4559; 
+ }
+
+ .home-container button:hover a{
+   color: #f5f5f5;
  }
