@@ -1,0 +1,38 @@
+.home {
+   padding: 10%
+}
+.home-container h1 {
+   font: 3em Elsie
+}
+
+.home-container h2 {
+   font: 2em Elsie;
+} 
+
+.home-container p {
+   font: 1.25em 'Bodoni Moda';
+   max-width: 55%;
+   color: rgb(82, 82, 82);
+   padding-bottom: 2%;
+   line-height: 1.75em;
+}
+
+.home-container button {
+   background-color: #EFA59D; 
+   padding: 10px 20px;
+   border-radius: 20px;
+   cursor: pointer;
+ }
+
+ .home-container button a{
+   color: #333;
+   text-decoration: none;
+ }
+
+ .home-container button:hover {
+   background-color: #0C4559; 
+ }
+
+ .home-container button:hover a{
+   color: #EFA59D;
+ }

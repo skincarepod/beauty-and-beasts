@@ -1,0 +1,43 @@
+.mat-toolbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #FAB9B2;
+}
+
+.mat-toolbar img {
+  max-width: 60px;
+  display: flex;
+}
+
+.mat-toolbar-destinations-wrapper {
+  display: flex;
+  justify-content: center; 
+  flex-grow: 10; 
+}
+
+.mat-toolbar-destinations {
+  display: flex;
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+}
+
+.mat-toolbar-destinations li {
+  margin: 0 10px; 
+  text-decoration: none;
+}
+
+.mat-toolbar-destinations li a {
+  text-decoration: none;
+  color: #000;
+  font: 0.8em 'Open Sans'
+}
+
+.mat-toolbar-spacer-right {
+  flex-grow: 1;
+}
+
+.router-container {
+  margin: 1em 1.5em 0 1.5em;
+}

@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, NgModule, OnInit} from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive, ActivatedRoute } from '@angular/router';
 
 import { AboutComponent } from './components/about/about.component';
 import { DogdetailsComponent } from './components/dogdetails/dogdetails.component';
