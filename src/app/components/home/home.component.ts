@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-home',
   standalone: true,
   imports: [
-      RouterOutlet, RouterLink,RouterLinkActive,
+      RouterOutlet, RouterLink, RouterLinkActive,
      MatButtonModule
   ],
   templateUrl: './home.component.html',
@@ -16,3 +16,5 @@ import { MatButtonModule } from '@angular/material/button';
 export class HomeComponent {
 
 }
+export { RouterLink, RouterOutlet, RouterLinkActive };
+

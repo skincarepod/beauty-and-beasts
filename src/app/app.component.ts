@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, NgModule, OnInit} from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive, ActivatedRoute } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './components/home/home.component';
@@ -13,13 +13,12 @@ import { BreedService } from './services/breeds.service';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, RouterLink,RouterLinkActive,
+    RouterOutlet, RouterLink, RouterLinkActive,
     MatToolbarModule,
     HomeComponent,
     AboutComponent,
     MatcherComponent,
     DogfinderComponent,
-
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
