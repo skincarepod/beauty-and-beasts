@@ -1,5 +1,4 @@
 export interface BreedInfo{
-    
         image_link: string;
         good_with_children: number;
         good_with_other_dogs: number;
@@ -28,4 +27,5 @@ export interface BreedInfo{
 
 export interface Breed{
         name:string;
+        index: number;
 }

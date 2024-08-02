@@ -1,11 +1,13 @@
 import { Component, OnInit} from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { AboutComponent } from './components/about/about.component';
+import { DogdetailsComponent } from './components/dogdetails/dogdetails.component';
+import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatcherComponent } from './components/matcher/matcher.component';
-import { AboutComponent } from './components/about/about.component';
-import { DogfinderComponent } from './components/dogfinder/dogfinder.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { BreedService } from './services/breeds.service';
 
 
@@ -13,13 +15,15 @@ import { BreedService } from './services/breeds.service';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, RouterLink,RouterLinkActive,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
     MatToolbarModule,
     HomeComponent,
     AboutComponent,
     MatcherComponent,
     DogfinderComponent,
-
+    DogdetailsComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -29,7 +33,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.breedService.getAllDogBreeds();
-    this.breedService.getAllDogsInfo();
+    this.breedService.getDog(94);
    
   }
 }
