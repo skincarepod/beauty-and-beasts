@@ -4,32 +4,32 @@
         <img mat-card-image src="{{dog.image_link}}"/>
             <mat-card-title-group>
                 <mat-card-title>{{dog.name}}</mat-card-title>
-                    <mat-card-subtitle>
-                        {{dog.name}}s can live between {{dog.min_life_expectancy}} and {{dog.max_life_expectancy}} years.
-                        Male {{dog.name}}s be as small as {{dog.min_height_male}} inches and as large as {{dog.max_height_male}} inches while female {{dog.name}}s can be as small as {{dog.min_height_female}} inches and as large as {{dog.max_height_female}} inches.
-                    </mat-card-subtitle>
+                <mat-card-subtitle>
+                    {{dog.name}}s can live between {{dog.min_life_expectancy}} and {{dog.max_life_expectancy}} years.
+                    Male {{dog.name}}s be as small as {{dog.min_height_male}} inches and as large as {{dog.max_height_male}} inches while female {{dog.name}}s can be as small as {{dog.min_height_female}} inches and as large as {{dog.max_height_female}} inches.
+                </mat-card-subtitle>
             </mat-card-title-group>
     </mat-card>
     <div class="dog-stats">
         <mat-card class="stat-card">
             <mat-card-header>Barking</mat-card-header>
-                <mat-progress-bar color="" mode="determinate" value="{{getStat(dog.barking)}}"></mat-progress-bar>
+            <mat-progress-bar color="" mode="determinate" value="{{getStat(dog.barking)}}"></mat-progress-bar>
             <mat-card-header>Coat Length</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.coat_length)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.coat_length)}}"></mat-progress-bar>
             <mat-card-header>Drooling</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.drooling)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.drooling)}}"></mat-progress-bar>
             <mat-card-header>Energy</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.energy)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.energy)}}"></mat-progress-bar>
             <mat-card-header>Grooming</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.grooming)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.grooming)}}"></mat-progress-bar>
             <mat-card-header>Playfulness</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.playfulness)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.playfulness)}}"></mat-progress-bar>
             <mat-card-header>Protectiveness</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.protectiveness)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.protectiveness)}}"></mat-progress-bar>
             <mat-card-header>Good with children</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.good_with_children)}}"></mat-progress-bar>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.good_with_children)}}"></mat-progress-bar>
             <mat-card-header>Good with other dogs</mat-card-header>
-                <mat-progress-bar mode="determinate" value="{{getStat(dog.good_with_other_dogs)}}"></mat-progress-bar>
-        </mat-card>
+            <mat-progress-bar mode="determinate" value="{{getStat(dog.good_with_other_dogs)}}"></mat-progress-bar>
+    </mat-card>
     </div>
 </div>
