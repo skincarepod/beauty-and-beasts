@@ -1,0 +1,52 @@
+.dog-profile {
+    display: flex;
+    margin: 2em 0 0 0;
+}
+
+img {
+    margin: 4em 2em 0 2em;
+}
+
+mat-card-title-group {
+    margin: 2em 0 0 2em;
+}
+
+mat-card-subtitle {
+    display: flex;
+    width: 90%;
+    margin: 0 0 2em 0;
+}
+
+.dog-card {
+    display: flex;
+    width: 50%;
+    margin: 0 0 0 3em;
+}
+
+.dog-stats {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.stat-card {
+    width: 60%;
+    padding: 0 0 1em 0;
+}
+
+mat-card-header {
+    margin: 0 0 5px 1em;
+    align-self: start;
+}
+
+mat-progress-bar {
+    width:80%;
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self:center;
+}

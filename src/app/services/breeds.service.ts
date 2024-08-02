@@ -7,6 +7,9 @@ import * as dogs from '../utils/dogs.json';
   providedIn: 'root',
 })
 export class BreedService {
+  static getDog(index: number) {
+    throw new Error('Method not implemented.');
+  }
   private dogsjson = JSON.parse(JSON.stringify(dogs));
 
   getAllDogsInfo() {
