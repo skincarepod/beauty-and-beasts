@@ -7,7 +7,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar'
 
 const selectedBreed: Breed = {
   name: 'Akita',
-  index: 94
+  index: 94,
 };
 
 @Component({
@@ -21,10 +21,6 @@ const selectedBreed: Breed = {
   styleUrl: './dogdetails.component.css'
 })
 export class DogdetailsComponent {
-  selectedBreed: Breed = {
-    name: 'Akita',
-    index: 94
-  };
   dog = this.breedService.getDog(selectedBreed.index);
 
   constructor(private breedService: BreedService){}
