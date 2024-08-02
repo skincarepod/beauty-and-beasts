@@ -33,7 +33,5 @@ export class AppComponent {
 
   ngOnInit() {
     this.breedService.getAllDogBreeds();
-    this.breedService.getDog(94);
-   
   }
 }

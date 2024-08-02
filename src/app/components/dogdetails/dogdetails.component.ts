@@ -21,10 +21,6 @@ const selectedBreed: Breed = {
   styleUrl: './dogdetails.component.css'
 })
 export class DogdetailsComponent {
-  selectedBreed: Breed = {
-    name: 'Akita',
-    index: 94
-  };
   dog = this.breedService.getDog(selectedBreed.index);
 
   constructor(private breedService: BreedService){}
@@ -34,6 +30,6 @@ export class DogdetailsComponent {
   }
 
   getStat(stat: any){
-    return (stat * 2) * 10;
+    return stat * 20;
   }
 }
