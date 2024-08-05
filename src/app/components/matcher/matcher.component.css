@@ -1,0 +1,42 @@
+.matcher-page{
+    padding: 2em;
+}
+
+.matcher-page p {
+    font: 1.25em 'Bodoni Moda';
+}
+
+.matcher-quiz-container {
+    display: flex;
+}
+
+.matcher-selections-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-top: 2em;
+}
+
+.matcher-selections-container button {
+    font: 1.3em 'Open Sans';
+    background-color: #EFA59D; 
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.matcher-selections-container button img {
+    width: 10%;
+    padding-top: 1em;
+}
+
+.matcher-selections-container button a{
+    color: #333;
+    text-decoration: none;
+  }
+ 
+.matcher-selections-container button:hover {
+    background-color: #0C4559; 
+    color: #EFA59D;
+  }

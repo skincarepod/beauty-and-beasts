@@ -48,5 +48,6 @@ mat-progress-bar {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-self:center;
+    align-self:center; 
 }
+

@@ -1,1 +1,18 @@
-<p>matcher works!</p>
+<div class="matcher-page">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim orci sapien, id semper justo ultricies tempus. Mauris scelerisque at elit quis interdum. Vestibulum ac leo magna. Phasellus et dignissim tortor. Maecenas id nunc quis justo mattis molestie. Integer quis leo quam. Phasellus non aliquet velit. Integer facilisis risus orci, vel commodo metus vestibulum in. Curabitur pellentesque fringilla nunc in venenatis. Praesent id lacus sagittis augue commodo pharetra. Donec in volutpat arcu. Nullam sed varius nunc.</p>
+<div class="matcher-quiz-container">
+    <div class="matcher-selections-container">
+        <button mat-raised-button (click)="onSkinTypeSelected('combination')">Combination Skin</button>
+        <button mat-raised-button (click)="onSkinTypeSelected('dry')">Dry Skin</button>
+        <button mat-raised-button (click)="onSkinTypeSelected('normal')">Normal Skin</button>
+        <button mat-raised-button (click)="onSkinTypeSelected('oily')">Oily Skin</button>
+        <button mat-raised-button (click)="onSkinTypeSelected('sensitive')">Sensitive Skin</button>
+    </div>
+    <div class="skin-type-info">
+        <img id="skin-type-image" [src]="selectedSkinType ? skinTypeImages[selectedSkinType] : defaultImage" alt="default skincare image">
+    </div>
+    <div>
+        <p id="skin-type-description">{{ skinTypeDescriptions[selectedSkinType] }}</p>
+    </div>
+</div>
+</div>
