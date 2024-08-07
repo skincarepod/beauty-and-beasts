@@ -9,6 +9,7 @@ import { MatcherComponent } from './components/matcher/matcher.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { BreedService } from './services/breeds.service';
+import { DogHeightPipe } from './pipes/dog-height.pipe';
 
 
 @Component({
@@ -24,6 +25,7 @@ import { BreedService } from './services/breeds.service';
     MatcherComponent,
     DogfinderComponent,
     DogdetailsComponent,
+    DogHeightPipe,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

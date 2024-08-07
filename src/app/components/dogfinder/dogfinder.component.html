@@ -1,1 +1,10 @@
-<p>dogfinder works!</p>
+<div *ngFor="let dog of allDogs">
+    <button [routerLink]="['/dogdetails', dog.index]">
+        <mat-card>
+            <mat-card-title-group>
+                <img mat-card-xl-image src="{{dog.image}}"/>
+                    <mat-card-subtitle>{{dog.name}}</mat-card-subtitle>
+            </mat-card-title-group>
+        </mat-card>
+    </button>    
+</div>

@@ -28,4 +28,5 @@ export interface BreedInfo{
 export interface Breed{
         name:string;
         index: number;
+        image: string;
 }

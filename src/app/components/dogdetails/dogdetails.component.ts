@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BreedService } from '../../services/breeds.service';
-import { Breed, BreedInfo } from '../../services/Breeds';
+import { BreedInfo } from '../../services/Breeds';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar'
-
-const selectedBreed: Breed = {
-  name: 'Akita',
-  index: 94,
-};
+import { DogHeightPipe } from '../../pipes/dog-height.pipe';
+import { DogAgePipe } from '../../pipes/dog-age.pipe';
 
 @Component({
   selector: 'app-dogdetails',
@@ -16,20 +14,19 @@ const selectedBreed: Breed = {
   imports: [
     MatCardModule,
     MatProgressBarModule,
+    DogAgePipe,
+    DogHeightPipe,
   ],
   templateUrl: './dogdetails.component.html',
   styleUrl: './dogdetails.component.css'
 })
 export class DogdetailsComponent {
-  dog = this.breedService.getDog(selectedBreed.index);
+  readonly dogId: number = this.route.snapshot.params['dogId'];
+  dog: BreedInfo = this.breedService.getDog(this.dogId);
 
-  constructor(private breedService: BreedService){}
-
-  ngOnInit(){
-  this.breedService.getDog(selectedBreed.index);
-  }
+  constructor(private breedService: BreedService, private readonly route: ActivatedRoute){}
 
   getStat(stat: any){
-    return (stat * 2) * 10;
+    return stat * 20;
   }
 }
