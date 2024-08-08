@@ -1,9 +1,42 @@
 .matcher-page{
-    padding: 2em;
+    padding: 10em 10em 10em 10em;
+    background-image: url('../../../assets/matcher-background.png');
+    width: 82vw;
+   height: 100vh;
+   background-size: cover;
 }
 
-.matcher-page p {
-    font: 1.25em 'Bodoni Moda';
+.matcher-intro {
+    display: flex;
+    padding-bottom: 3em;
+}
+.matcher-intro img {
+    margin-left: 3em;
+    width: 50em;
+}
+
+.matcher-heading {
+    font: 4em Elsie;
+    padding-bottom: 25px;
+}
+
+.matcher-leading-paragraph {
+    font: 1.4em 'Bodoni Moda';
+    color: #333;
+    padding-bottom: 1em;
+}
+
+.matcher-instructions {
+    font: 1.4em 'Bodoni Moda';
+    color: #333;
+    padding-bottom: 2em;
+}
+
+.matcher-quiz-intro {
+    text-align: center;
+    font: 1.5em 'Open Sans';
+    color: #333;
+    font-weight: 700;
 }
 
 .matcher-quiz-container {
@@ -18,25 +51,50 @@
 }
 
 .matcher-selections-container button {
-    font: 1.3em 'Open Sans';
+    font-size: 1.3em;
+    font-weight: 400;
     background-color: #EFA59D; 
-    border-radius: 20px;
+    border-radius: 2em;
     cursor: pointer;
     padding: 1em;
     margin-bottom: 2em;
 }
 
-.matcher-selections-container button img {
-    width: 10%;
-    padding-top: 1em;
-}
-
-.matcher-selections-container button a{
-    color: #333;
-    text-decoration: none;
-  }
- 
 .matcher-selections-container button:hover {
     background-color: #0C4559; 
     color: #EFA59D;
-  }
+}
+
+.skin-type-info {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 0 5em;
+    width: 90%;
+}
+
+#skin-type-image {
+    height: 24em;
+    border-radius: 4em;
+}
+
+#skin-type-description {
+    padding: 2em 0 0 2em;
+    font: 1.5em 'Bodoni Moda';
+    text-align: center;
+}
+
+.matcher-router-button button {
+    position: relative;
+    float: right; 
+   font-size: 1.3em;
+    font-weight: 400;
+    background-color: #EFA59D; 
+    border-radius: 2em;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.matcher-router-button button:hover {
+    background-color: #0C4559; 
+    color: #EFA59D;
+}

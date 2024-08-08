@@ -14,13 +14,15 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
+    
     expect(app).toBeTruthy();
   });
 
-  it('should render title within Toolbar', () => {
+  it('should render logo within Toolbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement.querySelectorAll('img')
-    expect(compiled[0]['src']).toContain('logo.png')
+    const compiled = fixture.debugElement.nativeElement.querySelectorAll('img');
+
+    expect(compiled[0]['src']).toContain('logo.png');
   });
 });
