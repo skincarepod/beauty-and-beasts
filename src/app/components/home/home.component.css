@@ -1,8 +1,16 @@
+.background-image {
+   width: 100vw;
+   height: 100vh;
+   background-image: url('../../../assets/home-background.png');
+   background-size: cover;
+ }
+
 .home {
    padding: 10%
 }
 .home-container h1 {
-   font: 3em Elsie
+   font: 4em Elsie;
+   word-wrap: break-word;
 }
 
 .home-container h2 {
