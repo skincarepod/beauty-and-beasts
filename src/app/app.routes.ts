@@ -10,5 +10,5 @@ export const routes: Routes = [
     {path: 'about', component:AboutComponent},
     {path: 'matcher', component:MatcherComponent},
     {path: 'dogfinder', component:DogfinderComponent},
-    {path: 'dogdetails', component:DogdetailsComponent},
+    {path: 'dogdetails/:dogId', component:DogdetailsComponent},
 ];
