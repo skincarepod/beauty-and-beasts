@@ -12,9 +12,9 @@ export class DogAgePipe implements PipeTransform {
     const maxAge = breedInfo.max_life_expectancy;
     const breed = breedInfo.name;
     if (minAge === maxAge) {
-      return `${breed}s, on average, grow to the age of ${minAge} years old.`;
+      return `${breed}s, on average, grow to be ${minAge} years old.`;
     }
-    return `${breed}s, on average, grow to the age of ${minAge} - ${maxAge} years old.`;
+    return `${breed}s, on average, grow to be ${minAge} - ${maxAge} years old.`;
   }
 
 }
