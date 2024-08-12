@@ -7,6 +7,9 @@ import * as dogs from '../utils/dogs.json';
   providedIn: 'root',
 })
 export class BreedService {
+  static getDog(index: number) {
+    throw new Error('Method not implemented.');
+  }
   private dogsjson = JSON.parse(JSON.stringify(dogs));
 
   getAllDogsInfo() {
@@ -46,9 +49,15 @@ export class BreedService {
   getAllDogBreeds() {
     let allBreeds: Breed[] = [];
     for (let i = 0; i < this.dogsjson.default.length; i++) {
-      allBreeds.push(this.dogsjson.default[i].name);
+      allBreeds.push(
+        {
+          name: this.dogsjson.default[i].name,
+          index: i,
+          image: this.dogsjson.default[i].image_link
+        }
+      );
     };
-    return allBreeds.sort();
+    return allBreeds.sort((a: Breed, b: Breed) => a.name.localeCompare(b.name));
   }
   searchDogs(searchTerm: string) {
     let allBreeds: string[] = [];
@@ -61,4 +70,112 @@ return results
     //return allBreeds.filter(breed => breed.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }
 
+
+  getDog(index: number) {
+    const allDogs = this.getAllDogsInfo()
+    return allDogs[index];
+  }
+
+  getOily(){
+    let oilyDogs = [];
+    let result = [];
+     let array = this.getAllDogsInfo();
+      for(let i=0; i< array.length-1; i++){
+        if(array[i].shedding + array[i].grooming + array[i].drooling ===8){
+        oilyDogs.push(array[i]);
+      }
+    } 
+    for(let i=0; i< oilyDogs.length-1 ; i++){
+      if(oilyDogs[i].shedding === 4 && oilyDogs[i].drooling ===3){
+        result.push(oilyDogs[i]);
+      };
+    };
+
+  //   if(oilyDogs.length === 0){
+  //   for(let i=0; i< oilyDogs.length-1 ; i++){
+  //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
+  //     result.push(oilyDogs[i]);
+  //   }
+  //   } 
+  // }
+    return result;
+    }
+    
+  getDry(){
+    let dryDogs = [];
+    let result = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< array.length-1; i++){
+      if(array[i].shedding + array[i].grooming + array[i].drooling ===9){
+        dryDogs.push(array[i]);
+      };
+    };
+    for(let i=0; i< dryDogs.length-1 ; i++){
+      if(dryDogs[i].shedding === 2 && dryDogs[i].drooling ===4){
+        result.push(dryDogs[i]);
+      };
+    };
+  
+    //   if(oilyDogs.length === 0){
+    //   for(let i=0; i< oilyDogs.length-1 ; i++){
+    //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
+    //     result.push(oilyDogs[i]);
+    //   }
+    //   } 
+    // }
+    return result;
+  };
+
+  getSensitive(){
+    let sensitiveDogs = [];
+    let result = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< array.length-1; i++){
+      if(array[i].shedding + array[i].grooming + array[i].drooling ===6){
+        sensitiveDogs.push(array[i]);
+      };
+    };
+    for(let i=0; i< sensitiveDogs.length-1 ; i++){
+      if(sensitiveDogs[i].shedding === 1 && sensitiveDogs[i].drooling ===1){
+        result.push(sensitiveDogs[i]);
+      };
+    };
+      //   if(oilyDogs.length === 0){
+      //   for(let i=0; i< oilyDogs.length-1 ; i++){
+      //     if(oilyDogs[i].shedding <= 4 && oilyDogs[i].drooling <=3  ){
+      //     result.push(oilyDogs[i]);
+      //   }
+      //   } 
+      // }
+    return result;
+  };
+
+  getCombo(){
+    let comboDogs = [];
+    let result = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< array.length-1; i++){
+      if(array[i].shedding + array[i].grooming + array[i].drooling ===7){
+        comboDogs.push(array[i]);
+      }
+    } 
+    for(let i=0; i<comboDogs.length-1 ; i++){
+      if(comboDogs[i].shedding === 3 && comboDogs[i].drooling ===2  ){
+        result.push(comboDogs[i]);
+      };
+    };
+    return result;
+  };
+
+  getAllDry(){
+    let allDryDogs = [];
+    let array = this.getAllDogsInfo();
+    for(let i=0; i< array.length-1; i++){
+      if(array[i].shedding === 2 && (array[i].drooling ===4 ||array[i].drooling ===5)){
+        allDryDogs.push(array[i]);
+      };
+    };
+    return allDryDogs;
+  };
+          
 }

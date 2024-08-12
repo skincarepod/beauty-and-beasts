@@ -1,1 +1,50 @@
-<p>matcher works!</p>
+<div class="matcher-page">
+    <div>
+  <div class="matcher-intro">
+    <div class="matcher-intro-info">
+    <h1 class="matcher-heading">
+     {{matcher.heading}}
+    </h1>
+    <p class="matcher-leading-paragraph">{{matcher.paragraph}}</p>
+        <p  class="matcher-instructions" [innerHTML]=matcher.instructions>
+        </p>
+    </div>
+        <div>
+            <img [src]="matcher.homeLogo">
+        </div>
+    </div>
+    <p class="matcher-quiz-intro">
+    {{matcher.quizMatcherIntro}}
+    </p>
+  <div class="matcher-quiz-container">
+    <div class="matcher-selections-container">
+      <button mat-raised-button (click)="onSkinTypeSelected('combination')">{{matcher.combination}}</button>
+      <button mat-raised-button (click)="onSkinTypeSelected('dry')">{{matcher.dry}}</button>
+      <button mat-raised-button (click)="onSkinTypeSelected('normal')">{{matcher.normal}}</button>
+      <button mat-raised-button (click)="onSkinTypeSelected('oily')">{{matcher.oily}}</button>
+      <button mat-raised-button (click)="onSkinTypeSelected('sensitive')">{{matcher.sensitive}}</button>
+    </div>
+    <div class="skin-type-info">
+        <div>
+      <img
+        id="skin-type-image"
+        [src]="
+          selectedSkinType ? skinTypeImages[selectedSkinType] : defaultImage
+        "
+        alt="default skincare image"
+      />
+</div>
+      <div>
+        <p id="skin-type-description">
+          {{ skinTypeDescriptions[selectedSkinType] }}
+        </p>
+        
+      </div>
+    </div>
+  </div>
+   <div class="matcher-router-button">
+  <button mat-raised-button [disabled]="!selectedSkinType" >
+    {{matcher.match}}
+  </button> </div>
+</div>
+</div>

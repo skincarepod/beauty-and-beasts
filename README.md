@@ -1,27 +1,39 @@
-# BeautieAndBeasts
+# Beauty-n-Beasts
+### About the App
+Beauty and Beasts is the app that will help you live your best life with the perfect furry friend. If you have skin concerns that you're afraid will be exacerbated, let us help you find the breed that perfectly complements your beauty routine and enhances your wellness journey
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+### How it works
+Our app allows users to share their skin concern and be matched with a dog breed that would compliment that concern. There are certain qualities about a dog's breed that may worsen existing skin conditions so our app crunches the numbers for you to help you find the right companion to live your healthiest life with.
 
-## Development server
+ Users can also simply look though a list of 279 dogs and learn more about them in order to make a more informed decision before adopting their future fur baby.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Try it yourself
+Check out the deployed app [here](https://beautynbeasts.netlify.app). 
 
-## Code scaffolding
+## Run it yourself
+If you'd like to instead clone and run the app on your local host, here are a few things you'll require:
+* [Angular CLI](https://v17.angular.io/cli#installing-angular-cli) by running the following command:
+    * ```npm install -g @angular/cli@17```
+* cd into your cloned project and run npm install:
+    * ```cd beauty-and-beasts```
+    * ```npm install```
+* Serve the application
+    * ```ng serve```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+By following these steps, your application should be running at http://localhost:4200/
 
-## Build
+## Check out the API 
+Although the application itself does not query a database, we do utilize the [Dogs API](https://api-ninjas.com/api/dogs) provided by API Ninjas for our dog profiles. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Without a way to send a query that would provide the information of all dogs, we thought it best to store the data ourselves to then utilize throughout the app. Therefore, use/knowledge of the API is not necessary. 
 
-## Running unit tests
+Besides this, there were no other changes made or APIs used.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Check out the Collaborators
+This app is the collective effort of brilliant engineers who value pets and skincare! Check out the profiles below:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* [Courtlyn Boykin](https://github.com/courtlyncodes)
+* [Daniela Reyes](https://github.com/drespana)
+* [Jazmin Tweedle](https://github.com/jrtweedle1)
+* [Sarai Escobar](https://github.com/saraiesco)
+* [Zoe Michaux](https://github.com/zoemx)

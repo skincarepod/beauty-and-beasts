@@ -1,0 +1,95 @@
+.dog-title {
+    background-color: #0C4559;
+}
+
+h1 {
+    text-align: center;
+    padding: .75em;
+    font: 3.5em 'Bodoni Moda';
+    color: #8BDE8B;
+}
+.dog-profile {
+    display: flex;
+    padding: 3em 2em 0 2em;
+   align-items: start;
+}
+
+.dog-card-container {
+    display: flex;
+    justify-content: right;
+    padding: 2em;
+}
+
+.dog-card-container, .dog-stats {
+    flex: 1;
+    height: 100%; 
+  }
+
+mat-card{
+    background-color: rgb(247, 247, 247);
+    height: 40rem !important;
+}
+
+.dog-card {
+    width: 90%;
+    border-radius: 3em;
+}
+
+mat-card-title{
+    text-align: center;
+    padding: 1em;
+    font: 1.5em 'Open Sans';
+    font-weight: 700;
+}
+
+img {
+    margin: 0 2em 0 2em;
+    border-radius: 3em;
+}
+
+mat-card-title-group {
+    margin: 2em 0 0 2em;
+}
+
+mat-card-subtitle {
+    display: flex;
+    width: 90%;
+    margin: 0 0 2em 0;
+    text-align: center;
+    font: 1.2em 'Open Sans';
+    font-weight: 500;
+    color: #333;
+}
+
+.dog-stats {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.stat-card {
+    display: flex;
+    align-self: flex-start;
+    width: 75%;
+    padding: 1em 0 4em 0;
+    height: 200%;
+    border-radius: 3em;
+}
+
+mat-card-header {
+    margin: 0 0 5px 3em;
+    align-self: start;
+    font: 1em 'Open Sans';
+    color: #333;
+    font-weight: 500;
+}
+
+mat-progress-bar {
+    width:80%;
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self:center; 
+}

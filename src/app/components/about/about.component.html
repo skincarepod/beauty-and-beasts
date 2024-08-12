@@ -1,1 +1,27 @@
-<p>about works!</p>
+<div class="about-container">
+    <h1 class="about-title">About Us</h1>
+    <div class="carousel-container">
+      <ngx-slick-carousel
+        class="carousel"
+        #slickModal="slick-carousel"
+        [config]="slideConfig"
+      >
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <h2>{{ slide.title }}</h2>
+          <ng-container *ngIf="slide.content">
+            <p>{{ slide.content }}</p>
+          </ng-container>
+          <ng-container *ngIf="slide.teamMembers">
+            <div class="team-members">
+              <div *ngFor="let member of slide.teamMembers" class="team-member">
+                <div class="profile-picture">
+                  <img [src]="member.image">
+                </div>
+                <p class="member-name">{{ member.name }}</p>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
