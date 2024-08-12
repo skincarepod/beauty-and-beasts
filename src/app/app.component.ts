@@ -35,11 +35,8 @@ export class AppComponent {
 
   ngOnInit() {
     this.breedService.getAllDogBreeds();
-<<<<<<< HEAD
     this.breedService.getAllDogsInfo();
-    this.breedService.searchDogs("Labrador");
-=======
+   // this.breedService.searchDogs("Labrador");
     this.breedService.getAllDry();
->>>>>>> f34d1d504b6c6269065e7a1750027270d50829a2
   }
 }

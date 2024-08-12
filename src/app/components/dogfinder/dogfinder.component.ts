@@ -7,7 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import * as dogsData from '../../utils/dogs.json';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
-import { BreedInfo, Breed, SearchDogs } from '../../services/Breeds';
+import { BreedInfo, Breed } from '../../services/Breeds';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -23,6 +24,7 @@ import { BreedInfo, Breed, SearchDogs } from '../../services/Breeds';
     MatInputModule,
     FormsModule,
     CommonModule,
+    MatCardModule,
   ],
   templateUrl:'./dogfinder.component.html',
   styleUrl: './dogfinder.component.css'
@@ -38,7 +40,8 @@ export class DogfinderComponent {
 
   ngOnInit() {
    // this.filteredDogs = this.dogsjson;
-this.search(this.searchText)
+//this.search(this.searchText)
+this.search("Pug")
   }
   // search(searchText: string) {
   //   const lowerCaseSearchTerm = searchText.toLowerCase();
@@ -49,7 +52,7 @@ this.search(this.searchText)
   //   // Use filteredDogs in your component logic (e.g., display them)
   // }
   search(searchText: string) {
-    let allBreeds: SearchDogs[] = [];
+    let allBreeds: BreedInfo[] = [];
     const lowerCaseSearchTerm = searchText.toLowerCase();
     for (let i = 0; i < this.dogsjson.default.length; i++) {
       if (this.dogsjson.default[i].name.toLowerCase().includes(lowerCaseSearchTerm)){
@@ -93,4 +96,4 @@ this.search(this.searchText)
 
 //  constructor(private breedService: BreedService){}
 
-// }
+ }

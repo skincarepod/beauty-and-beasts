@@ -9,21 +9,27 @@
   <input matInput type="text" [(ngModel)]="searchText" placeholder="Search for a dog breed">
 </mat-form-field>
 
+<!-- <div *ngIf="searchText">
+  <h2>Search Results for "{{searchText}}"</h2>
+  <ul>
+    <li *ngFor="let breed of search(searchText)">
+      {{ breed.name }} 
+      <img src="{{breed.image_link}}" alt="breed image">
+    </li>
+  </ul>
+</div> -->
 <div *ngIf="searchText">
   <h2>Search Results for "{{searchText}}"</h2>
   <ul>
     <li *ngFor="let breed of search(searchText)">
-      {{ breed.name }}
-      <img src={{breed.image_link}} alt="breed image">
-    </li>
-  </ul>
-<!-- <div *ngFor="let dog of allDogs">
-    <button [routerLink]="['/dogdetails', dog.index]">
+    <!-- <button [routerLink]="['/dogdetails', breed.index]"> -->
         <mat-card>
             <mat-card-title-group>
-                <img mat-card-xl-image src="{{dog.image}}"/>
-                    <mat-card-subtitle>{{dog.name}}</mat-card-subtitle>
+                <img mat-card-xl-image src="{{breed.image_link}}"/>
+                    <mat-card-subtitle>{{breed.name}}</mat-card-subtitle>
             </mat-card-title-group>
         </mat-card>
-    </button>    
-</div> -->
+      <!-- </button>     -->
+      </li>
+  </ul>
+</div>

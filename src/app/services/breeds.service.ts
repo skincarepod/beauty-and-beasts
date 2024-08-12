@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BreedInfo, Breed, SearchDogs } from './Breeds';
+import { BreedInfo, Breed } from './Breeds';
 
 import * as dogs from '../utils/dogs.json';
 
@@ -59,16 +59,17 @@ export class BreedService {
     };
     return allBreeds.sort((a: Breed, b: Breed) => a.name.localeCompare(b.name));
   }
-  searchDogs(searchTerm: string) {
-    let allBreeds: string[] = [];
-    for (let i = 0; i < this.dogsjson.default.length; i++) {
-      allBreeds.push(this.dogsjson.default[i].name);
-    };
-   // let filteredNumbers: number[] = numbers.filter((num) => num > 10);
-    let results: string[] = allBreeds.filter((dog)=> dog = searchTerm)
-return results
-    //return allBreeds.filter(breed => breed.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  }
+//   searchDogs(searchTerm: string) {
+//     let allBreeds: string[] = [];
+//     for (let i = 0; i < this.dogsjson.default.length; i++) {
+//       allBreeds.push(this.dogsjson.default[i].name);
+//     };
+//    // let filteredNumbers: number[] = numbers.filter((num) => num > 10);
+//     //let results: string[] = allBreeds.filter((dog)=> dog = searchTerm)
+//     console.log(allBreeds)
+// return allBreeds
+//     //return allBreeds.filter(breed => breed.name.toLowerCase().includes(searchTerm.toLowerCase()));
+//   }
 
 
   getDog(index: number) {
