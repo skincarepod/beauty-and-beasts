@@ -29,3 +29,8 @@ export interface BreedInfo{
 export interface Breed{
         name:string;
 }
+
+export interface SearchDogs{
+        image_link:string,
+        name:string;
+}
