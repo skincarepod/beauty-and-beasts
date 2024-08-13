@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { BreedInfo, Breed } from '../../services/Breeds';
 import { MatCardModule } from '@angular/material/card';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -25,6 +26,7 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     CommonModule,
     MatCardModule,
+    RouterLink,
   ],
   templateUrl:'./dogfinder.component.html',
   styleUrl: './dogfinder.component.css'
@@ -41,7 +43,7 @@ export class DogfinderComponent {
   ngOnInit() {
    // this.filteredDogs = this.dogsjson;
 //this.search(this.searchText)
-this.search("Pug")
+this.search("")
   }
   // search(searchText: string) {
   //   const lowerCaseSearchTerm = searchText.toLowerCase();
@@ -52,16 +54,32 @@ this.search("Pug")
   //   // Use filteredDogs in your component logic (e.g., display them)
   // }
   search(searchText: string) {
-    let allBreeds: BreedInfo[] = [];
+    let allBreeds: Breed[] = [];
     const lowerCaseSearchTerm = searchText.toLowerCase();
     for (let i = 0; i < this.dogsjson.default.length; i++) {
       if (this.dogsjson.default[i].name.toLowerCase().includes(lowerCaseSearchTerm)){
-      allBreeds.push(this.dogsjson.default[i]);
+      allBreeds.push({
+               name: this.dogsjson.default[i].name,
+               index: i,
+               image: this.dogsjson.default[i].image_link
+              });
       }
     };
     console.log(allBreeds)
     return allBreeds
-
+    // getAllDogBreeds() {
+    //   let allBreeds: Breed[] = [];
+    //   for (let i = 0; i < this.dogsjson.default.length; i++) {
+    //     allBreeds.push(
+    //       {
+    //         name: this.dogsjson.default[i].name,
+    //         index: i,
+    //         image: this.dogsjson.default[i].image_link
+    //       }
+    //     );
+    //   };
+    //   return allBreeds.sort((a: Breed, b: Breed) => a.name.localeCompare(b.name));
+    // }
 
    // const dogNames: string[] = this.dogsjson.filter(dog => dog.name);
    // const filteredDogs = allBreeds.filter(dog => dog.name.toLowerCase().includes(lowerCaseSearchTerm));

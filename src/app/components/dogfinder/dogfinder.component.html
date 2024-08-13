@@ -22,14 +22,14 @@
   <h2>Search Results for "{{searchText}}"</h2>
   <ul>
     <li *ngFor="let breed of search(searchText)">
-    <!-- <button [routerLink]="['/dogdetails', breed.index]"> -->
+    <button [routerLink]="['/dogdetails', breed.index]"> 
         <mat-card>
             <mat-card-title-group>
-                <img mat-card-xl-image src="{{breed.image_link}}"/>
+                <img mat-card-xl-image src="{{breed.image}}"/>
                     <mat-card-subtitle>{{breed.name}}</mat-card-subtitle>
             </mat-card-title-group>
         </mat-card>
-      <!-- </button>     -->
+      </button>    
       </li>
   </ul>
 </div>
